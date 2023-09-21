@@ -1,0 +1,20 @@
+name: Job4j Social Media API CI
+
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  build:
+    runs-on: windows-2019
+steps:
+  - uses: actions/checkout@v4
+  - name: Set up JDK 17
+    uses: actions/setup-java@v3
+    with:
+      java-version: '17'
+      distribution: 'microsoft'
+  - name: Test Coverage
+    uses: codecov/codecov-action@v1
+    with:
+      token: 'bcf8f5fe-ccb2-428c-b883-7b4f96be5522'
