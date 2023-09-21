@@ -17,4 +17,4 @@ steps:
   - name: Test Coverage
     uses: codecov/codecov-action@v1
     with:
-      token: 'bcf8f5fe-ccb2-428c-b883-7b4f96be5522'
+      token: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'

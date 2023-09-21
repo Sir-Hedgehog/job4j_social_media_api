@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Sir-Hedgehog/job4j_counter.svg?branch=master)](https://travis-ci.org/Sir-Hedgehog/job4j_counter)
+![Build Status](https://github.com/Sir-Hedgehog/job4j_social_media_api/actions/workflows/build.yml/badge.svg?branch=main)
 
 # job4j_social_media_api
 This project is RESTful API for social media platform
