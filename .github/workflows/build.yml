@@ -7,14 +7,14 @@ on:
 jobs:
   build:
     runs-on: windows-2019
-steps:
-  - uses: actions/checkout@v4
-  - name: Set up JDK 17
-    uses: actions/setup-java@v3
-    with:
-      java-version: '17'
-      distribution: 'microsoft'
-  - name: Test Coverage
-    uses: codecov/codecov-action@v1
-    with:
-      token: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'microsoft'
+      - name: Test Coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
