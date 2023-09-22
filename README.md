@@ -22,7 +22,9 @@ This project is RESTful API for social media platform
 * Spring Boot;
 * Spring Security;
 * Gradle;
-* Swagger
+* JaCoCo;
+* GitHub Actions;
+* Codecov
 
 ## Author
 Sergey Gromovoy
