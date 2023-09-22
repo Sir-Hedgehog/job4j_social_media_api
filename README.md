@@ -1,4 +1,4 @@
-![action](https://github.com/Sir-Hedgehog/job4j_social_media_api/actions/workflows/build.yml/badge.svg?branch=main)
+![github_action](https://github.com/Sir-Hedgehog/job4j_social_media_api/actions/workflows/build.yml/badge.svg?branch=main)
 [![codecov](https://codecov.io/gh/Sir-Hedgehog/job4j_social_media_api/branch/master/graph/badge.svg)](https://codecov.io/gh/Sir-Hedgehog/job4j_social_media_api)
 
 # job4j_social_media_api
