@@ -22,7 +22,7 @@ repositories {
 tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
-        csv.required.set(false)
+        csv.required.set(true)
         html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
     }
 }
@@ -34,8 +34,6 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.security:spring-security-test")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.0-RC1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.0-RC1")
 }
 
 tasks.withType<KotlinCompile> {
