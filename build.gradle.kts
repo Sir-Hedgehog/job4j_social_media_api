@@ -19,12 +19,23 @@ repositories {
     mavenCentral()
 }
 
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(true)
+        csv.required.set(false)
+        html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
+    }
+}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jacoco:org.jacoco.core:0.8.10")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.security:spring-security-test")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.0-RC1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.0-RC1")
 }
 
 tasks.withType<KotlinCompile> {
