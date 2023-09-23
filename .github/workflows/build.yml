@@ -15,7 +15,7 @@ jobs:
           java-version: 17
           distribution: microsoft
       - name: Generate report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: Report
           path: app/build/reports/coverage/debug
