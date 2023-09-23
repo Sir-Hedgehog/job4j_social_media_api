@@ -14,9 +14,19 @@ jobs:
         with:
           java-version: 17
           distribution: microsoft
+      - name: Generate report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Report
+          path: app/build/reports/coverage/debug
+      - name: Download test reports folder
+        uses: actions/download-artifact@v3
+        with:
+          name: report
+          path: app/build/reports/coverage/debug
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
-          files: "build/test-results/test/TEST-ru.job4j.middle.MiddleApplicationTests.xml"
         env:
           CODECOV_TOKEN: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
+        with:
+          files: "app/build/reports/coverage/debug/report.xml"
