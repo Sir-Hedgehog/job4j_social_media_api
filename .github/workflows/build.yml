@@ -16,5 +16,7 @@ jobs:
           distribution: microsoft
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          files: "build/reports/coverage/report.xml"
         env:
-          CODECOV_TOKEN: '38b5e2b6-e9d3-44f4-aa1f-4ea04a644890'
+          CODECOV_TOKEN: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
