@@ -14,17 +14,7 @@ jobs:
         with:
           java-version: 17
           distribution: microsoft
-      - name: Generate Report
-        run: |
-          pip install codecov
-          pip install pytest-cov
-          pytest --cov=./ --cov-report=xml
-          codecov
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3.1.0
+        uses: codecov/codecov-action@v3
         env:
-          token: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
-          directory: ./coverage/reports/
-          env_vars: OS,PYTHON
-          files: /home/runner/work/SIESTAstepper/SIESTAstepper/coverage.xml
-          flags: tests
+          CODECOV_TOKEN: '38b5e2b6-e9d3-44f4-aa1f-4ea04a644890'
