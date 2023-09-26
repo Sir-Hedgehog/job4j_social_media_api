@@ -50,6 +50,6 @@ tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
         html.required.set(true)
-        xml.outputLocation.set(File("$buildDir/../build/reports/jacoco/test/xml/report.xml"))
+        xml.outputLocation.set(File("build/reports/jacoco/test/xml/report.xml"))
     }
 }
