@@ -49,6 +49,7 @@ tasks.jacocoTestReport {
 tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
+        html.required.set(true)
+        xml.outputLocation.set(File("$buildDir/reports/jacoco/test/xml/report.xml"))
     }
-    dependsOn(allprojects.map { it.tasks.named<Test>("test") })
 }
