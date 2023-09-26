@@ -42,12 +42,19 @@ tasks.withType<Test> {
 tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
+
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
 }
 
 tasks.jacocoTestReport {
     reports {
+        sourceDirectories.from(fileTree("src/main/java"))
+        classDirectories.from(
+            fileTree("build/classes") {
+                exclude("**/*Options*")
+            }
+        )
         xml.required.set(true)
         html.required.set(true)
         xml.outputLocation.set(File("build/reports/jacoco/test/xml/report.xml"))
