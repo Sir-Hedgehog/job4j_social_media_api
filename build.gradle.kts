@@ -50,4 +50,5 @@ tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
     }
+    dependsOn(allprojects.map { it.tasks.named<Test>("test") })
 }
