@@ -29,4 +29,4 @@ jobs:
         env:
           CODECOV_TOKEN: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
         with:
-          files: "../build/test-results/test/TEST-ru.job4j.middle.MiddleApplicationTests.xml"
+          files: "build/test-results/test/TEST-ru.job4j.middle.MiddleApplicationTests.xml"
