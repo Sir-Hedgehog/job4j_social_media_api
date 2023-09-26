@@ -14,19 +14,25 @@ jobs:
         with:
           java-version: 17
           distribution: microsoft
-#      - name: Generate report
-#        uses: actions/upload-artifact@v1
-#        with:
-#          name: Report
-#          path: ../build/test-results/test
-#      - name: Download test reports folder
-#        uses: actions/download-artifact@v1
-#        with:
-#          name: report
-#          path: ../build/test-results/test
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build project
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: test jacocoTestReport
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: '81a425a1-5bfc-4b12-ba48-cc730998d5bb'
-#        with:
-#          files: "build/test-results/test/TEST-ru.job4j.middle.MiddleApplicationTests.xml"
+      - name: Upload test report
+        uses: actions/upload-artifact@v1
+        with:
+          path: build/reports/tests/test/
+          name: Test Report
+#          retention-days: 14
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v1
+        with:
+          path: build/reports/jacoco/test/
+          name: Coverage Report
+#          retention-days: 14
