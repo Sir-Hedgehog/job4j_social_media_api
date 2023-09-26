@@ -14,16 +14,16 @@ jobs:
         with:
           java-version: 17
           distribution: microsoft
-      - name: Generate report
-        uses: actions/upload-artifact@v1
-        with:
-          name: Report
-          path: ../build/test-results/test
-      - name: Download test reports folder
-        uses: actions/download-artifact@v1
-        with:
-          name: report
-          path: ../build/test-results/test
+#      - name: Generate report
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: Report
+#          path: ../build/test-results/test
+#      - name: Download test reports folder
+#        uses: actions/download-artifact@v1
+#        with:
+#          name: report
+#          path: ../build/test-results/test
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
